@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.UI;
+
+public class Widget_four_direction_operation : MonoBehaviour {
+    public UIHandler uiHandler;
+    public GameObject operationPanel;
+    public Button upButton;
+    public Button downButton;
+    public Button leftButton;
+    public Button rightButton;
+
+    Image upOnImage;
+    Image upOffImage;
+    Image downOnImage;
+    Image downOffImage;
+    Image leftOffImage;
+    Image leftOnImage;
+    Image rightOffImage;
+    Image rightOnImage;
+
+	// Use this for initialization
+	void Start () {
+        Image [] i  = upButton.GetComponentsInChildren<Image>();
+        upOnImage = i[0];
+        upOffImage = i[1];
+        i = downButton.GetComponentsInChildren<Image>();
+        downOnImage = i[0];
+        downOffImage = i[1];
+
+
+    }
+	
+
+    void setDirection(int i)
+    {
+        // up :0  right :1 down:2 left :3
+        upOnImage.enabled = true;
+    }
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
